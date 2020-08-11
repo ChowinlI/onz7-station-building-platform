@@ -1,19 +1,38 @@
-"use strict";
-const path = require("path");
-const compressionPlugin = require("compression-webpack-plugin");
-const name = "onz7建站平台";
+'use strict'
+const path = require('path')
+const compressionPlugin = require('compression-webpack-plugin')
+const name = 'onz7'
+const userData = require('./mock_data/user.json')
+const token = userData.token
+const userInfo = userData.userInfo
 
 function resolve(dir) {
-  return path.join(__dirname, dir);
+  return path.join(__dirname, dir)
 }
 
 module.exports = {
-  publicPath: "/",
-  outputDir: "dist",
-  assetsDir: "static",
+  publicPath: '/',
+  outputDir: 'dist',
+  assetsDir: 'static',
   lintOnSave: false,
   productionSourceMap: false,
-  devServer: {},
+  devServer: {
+    before(app){
+      app.post('/api/login', function(req, res){
+        userInfo = Object.assign(userInfo, {username: req.username})
+        res.json({
+          code: 0,
+          data: token
+        })
+      })
+      app.get('/api/userInfo', function(req, res){
+        res.json({
+          code: 0,
+          data: userInfo
+        })
+      })
+    }
+  },
   configureWebpack: {
     name: name,
     plugins: [
@@ -24,23 +43,23 @@ module.exports = {
       }),
     ],
     performance: {
-      hints: "warning",
+      hints: 'warning',
       //入口起点的最大体积 整数类型（以字节为单位）
-      maxEntrypointSize: 50000000,
+      maxEntrypointSize: 500000,
       //生成文件的最大体积 整数类型（以字节为单位 300k）
-      maxAssetSize: 30000000,
+      maxAssetSize: 300000,
       //只给出 js 文件的性能提示
       assetFilter: function(assetFilename) {
-        return assetFilename.endsWith(".js");
+        return assetFilename.endsWith('.js');
       },
     },
     resolve: {
       alias: {
-        "@": resolve("src"),
-        common: resolve("src/common"),
-        components: resolve("src/components"),
-        api: resolve("src/api"),
-        views: resolve("src/views"),
+        '@': resolve('src'),
+        common: resolve('src/common'),
+        components: resolve('src/components'),
+        api: resolve('src/api'),
+        views: resolve('src/views'),
       },
     },
   },
@@ -53,5 +72,5 @@ module.exports = {
     loaderOptions: {},
     // 启用 CSS modules for all css / pre-processor files.
     modules: false,
-  },
-};
+  }
+}
