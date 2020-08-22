@@ -1,4 +1,5 @@
-import Vue from "vue";
+import Vue from 'vue'
+
 import {
   Container,
   Header,
@@ -13,12 +14,12 @@ import {
   Menu,
   Submenu,
   MenuItemGroup,
-  MenuItem,
-} from "element-ui";
+  MenuItem
+} from 'element-ui'
 
-Vue.prototype.$ELEMENT = { size: "small", zIndex: 3000 };
+Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 }
 
-[
+const components = [
   Container,
   Header,
   Aside,
@@ -32,7 +33,9 @@ Vue.prototype.$ELEMENT = { size: "small", zIndex: 3000 };
   Menu,
   Submenu,
   MenuItemGroup,
-  MenuItem,
-].forEach((comp) => {
-  Vue.use(comp);
-});
+  MenuItem
+]
+
+components.forEach((comp) => {
+  Vue.use(comp)
+})

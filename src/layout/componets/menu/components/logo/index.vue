@@ -15,21 +15,21 @@
 
 <script>
 export default {
-  name: "nemuLogo",
+  name: 'nemuLogo',
   props: {
     collapse: {
       type: Boolean,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
-      title: "onz7建站平台",
+      title: 'onz7建站平台',
       logo:
-        "https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png",
-    };
-  },
-};
+        'https://wpimg.wallstcn.com/69a1c46c-eb1c-4b46-8bd4-e9e686ef5251.png'
+    }
+  }
+}
 </script>
 
 <style lang="less" scoped>

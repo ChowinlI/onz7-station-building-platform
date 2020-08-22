@@ -22,7 +22,7 @@
             class="login-form-body-submit"
             type="primary"
             :loading="loading"
-            @click="login"
+            @click="loginSubmit"
           >登录</el-button>
         </el-form-item>
         <el-checkbox class="login-form-body-remenber" v-model="remenber">记住我</el-checkbox>
@@ -32,21 +32,29 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'login',
   data() {
     return {
       loginForm: {
-        username: '',
-        password: '',
+        username: 'admin',
+        password: '123456'
       },
       remenber: false,
-      loading: false,
+      loading: false
     }
   },
   methods: {
-    login() {},
-  },
+    ...mapActions('user', ['login']),
+    /**
+     * 登录
+     */
+    loginSubmit() {
+      let data = this.loginForm
+      this.login(data)
+    }
+  }
 }
 </script>
 

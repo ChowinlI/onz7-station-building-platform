@@ -10,28 +10,26 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex'
 export default {
-  name: "top-bar",
+  name: 'top-bar',
   computed: {
-    ...mapGetters(["menu"]),
+    ...mapGetters(['menu']),
     handleCollapseIcon() {
-      return this.menu.opened ? "el-icon-s-unfold" : "el-icon-s-fold";
-    },
+      return this.menu.opened ? 'el-icon-s-unfold' : 'el-icon-s-fold'
+    }
   },
-  mounted() {
-    console.log(this);
-  },
+  mounted() {},
   methods: {
     toggleMenu() {
-      this.$store.dispatch("app/toggleMenu");
-    },
-  },
-};
+      this.$store.dispatch('app/toggleMenu')
+    }
+  }
+}
 </script>
 
 <style lang="less" scoped>
-@import url("~common/styles/variables.less");
+@import url('~common/styles/variables.less');
 .top-bar {
   height: 60px;
   display: flex;
