@@ -11,19 +11,14 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('views/login')
-  },
-  {
-    path: '/layout',
-    name: 'layout',
-    component: () => import('@/layout')
+    component: () => import('@/views/login')
   }
 ]
 
 const createRouter = () => {
   return new VueRouter({
-    mode: 'history',
-    base: process.env.BASE_URL,
+    // mode: 'history',
+    // base: process.env.BASE_URL,
     routes
   })
 }

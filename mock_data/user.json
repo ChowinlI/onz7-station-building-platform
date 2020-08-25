@@ -15,7 +15,7 @@
       "path": "dashboard",
       "name": "dashboard",
       "hidden": false,
-      "component": "view/dashboard/index.vue",
+      "component": "views/dashboard/index.vue",
       "sort": 1,
       "meta": {
         "keepAlive": false,
@@ -36,7 +36,7 @@
       "path": "admin",
       "name": "superAdmin",
       "hidden": false,
-      "component": "view/superAdmin/index.vue",
+      "component": "views/superAdmin/index.vue",
       "sort": 3,
       "meta": {
         "keepAlive": false,
@@ -56,7 +56,7 @@
           "path": "dictionaryDetail/:id",
           "name": "dictionaryDetail",
           "hidden": true,
-          "component": "view/superAdmin/dictionary/sysDictionaryDetail.vue",
+          "component": "views/superAdmin/dictionary/sysDictionaryDetail.vue",
           "sort": 1,
           "meta": {
             "keepAlive": false,
@@ -77,7 +77,7 @@
           "path": "authority",
           "name": "authority",
           "hidden": false,
-          "component": "view/superAdmin/authority/authority.vue",
+          "component": "views/superAdmin/authority/authority.vue",
           "sort": 1,
           "meta": {
             "keepAlive": false,
@@ -98,7 +98,7 @@
           "path": "menu",
           "name": "menu",
           "hidden": false,
-          "component": "view/superAdmin/menu/menu.vue",
+          "component": "views/superAdmin/menu/menu.vue",
           "sort": 2,
           "meta": {
             "keepAlive": true,
@@ -119,7 +119,7 @@
           "path": "api",
           "name": "api",
           "hidden": false,
-          "component": "view/superAdmin/api/api.vue",
+          "component": "views/superAdmin/api/api.vue",
           "sort": 3,
           "meta": {
             "keepAlive": true,
@@ -140,7 +140,7 @@
           "path": "user",
           "name": "user",
           "hidden": false,
-          "component": "view/superAdmin/user/user.vue",
+          "component": "views/superAdmin/user/user.vue",
           "sort": 4,
           "meta": {
             "keepAlive": false,
@@ -161,7 +161,7 @@
           "path": "dictionary",
           "name": "dictionary",
           "hidden": false,
-          "component": "view/superAdmin/dictionary/sysDictionary.vue",
+          "component": "views/superAdmin/dictionary/sysDictionary.vue",
           "sort": 5,
           "meta": {
             "keepAlive": false,
@@ -182,7 +182,7 @@
           "path": "operation",
           "name": "operation",
           "hidden": false,
-          "component": "view/superAdmin/operation/sysOperationRecord.vue",
+          "component": "views/superAdmin/operation/sysOperationRecord.vue",
           "sort": 6,
           "meta": {
             "keepAlive": false,
@@ -205,7 +205,7 @@
       "path": "person",
       "name": "person",
       "hidden": true,
-      "component": "view/person/person.vue",
+      "component": "views/person/person.vue",
       "sort": 4,
       "meta": {
         "keepAlive": false,
@@ -226,7 +226,7 @@
       "path": "systemTools",
       "name": "systemTools",
       "hidden": false,
-      "component": "view/systemTools/index.vue",
+      "component": "views/systemTools/index.vue",
       "sort": 5,
       "meta": {
         "keepAlive": false,
@@ -246,7 +246,7 @@
           "path": "autoCode",
           "name": "autoCode",
           "hidden": false,
-          "component": "view/systemTools/autoCode/index.vue",
+          "component": "views/systemTools/autoCode/index.vue",
           "sort": 1,
           "meta": {
             "keepAlive": true,
@@ -267,7 +267,7 @@
           "path": "formCreate",
           "name": "formCreate",
           "hidden": false,
-          "component": "view/systemTools/formCreate/index.vue",
+          "component": "views/systemTools/formCreate/index.vue",
           "sort": 2,
           "meta": {
             "keepAlive": true,
@@ -290,7 +290,7 @@
       "path": "example",
       "name": "example",
       "hidden": false,
-      "component": "view/example/index.vue",
+      "component": "views/example/index.vue",
       "sort": 6,
       "meta": {
         "keepAlive": false,
@@ -310,7 +310,7 @@
           "path": "table",
           "name": "table",
           "hidden": false,
-          "component": "view/example/table/table.vue",
+          "component": "views/example/table/table.vue",
           "sort": 1,
           "meta": {
             "keepAlive": false,
@@ -331,7 +331,7 @@
           "path": "form",
           "name": "form",
           "hidden": false,
-          "component": "view/example/form/form.vue",
+          "component": "views/example/form/form.vue",
           "sort": 2,
           "meta": {
             "keepAlive": false,
@@ -352,7 +352,7 @@
           "path": "rte",
           "name": "rte",
           "hidden": false,
-          "component": "view/example/rte/rte.vue",
+          "component": "views/example/rte/rte.vue",
           "sort": 3,
           "meta": {
             "keepAlive": false,
@@ -373,7 +373,7 @@
           "path": "excel",
           "name": "excel",
           "hidden": false,
-          "component": "view/example/excel/excel.vue",
+          "component": "views/example/excel/excel.vue",
           "sort": 4,
           "meta": {
             "keepAlive": false,
@@ -394,7 +394,7 @@
           "path": "upload",
           "name": "upload",
           "hidden": false,
-          "component": "view/example/upload/upload.vue",
+          "component": "views/example/upload/upload.vue",
           "sort": 5,
           "meta": {
             "keepAlive": false,
@@ -415,7 +415,7 @@
           "path": "breakpoint",
           "name": "breakpoint",
           "hidden": false,
-          "component": "view/example/breakpoint/breakpoint.vue",
+          "component": "views/example/breakpoint/breakpoint.vue",
           "sort": 6,
           "meta": {
             "keepAlive": false,
@@ -436,7 +436,7 @@
           "path": "customer",
           "name": "customer",
           "hidden": false,
-          "component": "view/example/customer/customer.vue",
+          "component": "views/example/customer/customer.vue",
           "sort": 7,
           "meta": {
             "keepAlive": false,
@@ -459,7 +459,7 @@
       "path": "about",
       "name": "about",
       "hidden": false,
-      "component": "view/about/index.vue",
+      "component": "views/about/index.vue",
       "sort": 7,
       "meta": {
         "keepAlive": false,

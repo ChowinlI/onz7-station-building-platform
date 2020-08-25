@@ -23,10 +23,18 @@ module.exports = {
           data: { token }
         })
       })
+
       app.get('/api/userInfo', function(req, res) {
         res.json({
           code: 0,
           data: userInfo
+        })
+      })
+
+      app.post('/api/menu/getMenu', function(req, res) {
+        res.json({
+          code: 0,
+          data: { menus: menu }
         })
       })
     }

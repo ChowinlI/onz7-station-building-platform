@@ -38,9 +38,9 @@ const actions = {
     if (loginRes.code == 0) {
       const redirect = router.history.current.query.redirect
       if (redirect) {
-        router.push({ path: redirect })
+        router.push({ path: redirect }).catch(() => {})
       } else {
-        router.push({ path: '/layout' })
+        router.push({ path: '/layout/dashboard' }).catch(() => {})
       }
     }
   },
