@@ -1,75 +1,59 @@
 <template>
-  <div class="menu-wrapper">
-    <logo :collapse="menu.opened"></logo>
-    <el-menu
-      default-active="1-4-1"
-      class="sidebar-menu"
-      background-color="#001529"
-      text-color="#fff"
-      :active-text-color="variables.primaryColor"
-      :collapse="menu.opened"
-    >
-      <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-location"></i>
-          <span slot="title">导航一</span>
-        </template>
-        <el-menu-item-group>
-          <span slot="title">分组一</span>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="分组2">
-          <el-menu-item index="1-3">选项3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <span slot="title">选项4</span>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <span slot="title">导航二</span>
-      </el-menu-item>
-      <el-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
-        <span slot="title">导航三</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
-        <span slot="title">导航四</span>
-      </el-menu-item>
-    </el-menu>
-  </div>
+    <div class="menu-wrapper">
+        <logo :collapse="menu.opened"></logo>
+        <transition :duration="{ enter: 800, leave: 100 }" mode="out-in" name="el-fade-in-linear">
+            <el-menu default-active="active" class="sidebar-menu" :background-color="variables.dark" :text-color="variables.white" :active-text-color="variables.primaryColor" :collapse="menu.opened">
+                <template v-for="item in asyncRouters[0].children">
+                    <menuListItem :key="item.name" :routerInfo="item" v-if="!item.hidden" />
+                </template>
+            </el-menu>
+        </transition>
+    </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import variables from "common/styles/variables.less";
-import Logo from "./components/logo";
+import { mapGetters } from 'vuex';
+import variables from 'common/styles/variables.less';
+import logo from './components/logo';
+import menuListItem from './components/menuListItem';
 export default {
-  name: "v-menu",
-  components: {
-    Logo,
-  },
-  data() {
-    return {
-      variables: { ...variables },
-    };
-  },
-  computed: {
-    ...mapGetters(["menu"]),
-  },
+    name: 'v-menu',
+    components: {
+        logo,
+        menuListItem
+    },
+    data() {
+        return {
+            variables: { ...variables }
+        };
+    },
+    computed: {
+        ...mapGetters({
+            menu: 'menu',
+            asyncRouters: 'router/asyncRouters'
+        })
+    },
+    created() {
+        this.active = this.$route.name;
+    },
+    mounted() {
+        console.log(this);
+    },
+    watch: {
+        $$route() {
+            this.active = this.$route.name;
+        }
+    }
 };
 </script>
 
 <style lang="less" scoped>
 .sidebar-menu {
-  border-right: transparent;
+    border-right: transparent;
 
-  &:not(.el-menu--collapse) {
-    width: 200px;
-    min-height: 400px;
-  }
+    &:not(.el-menu--collapse) {
+        width: 200px;
+        min-height: 400px;
+    }
 }
 </style>

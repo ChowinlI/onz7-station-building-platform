@@ -44,7 +44,6 @@ const actions = {
         path: '/layout',
         name: 'layout',
         component: 'layout/index.vue',
-        redirect: '/layout/dashboard',
         meta: {
           title: '底层layout'
         },

@@ -10,7 +10,7 @@ router.beforeEach(async (to, from, next) => {
   if (whiteList.includes(to.name)) {
     // 在白名单且已登录
     if (token) {
-      next('/layout/dashboard')
+      next('/layout')
     } else {
       next()
     }

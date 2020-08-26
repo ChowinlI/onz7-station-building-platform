@@ -40,7 +40,7 @@ const actions = {
       if (redirect) {
         router.push({ path: redirect }).catch(() => {})
       } else {
-        router.push({ path: '/layout/dashboard' }).catch(() => {})
+        router.push({ path: '/layout' }).catch(() => {})
       }
     }
   },

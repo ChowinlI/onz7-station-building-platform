@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const compressionPlugin = require('compression-webpack-plugin')
-const name = 'onz7电商建站平台'
+const name = 'Onz7建站平台'
 const userData = require('./mock_data/user.json')
 const { token, userInfo, menu } = userData
 
