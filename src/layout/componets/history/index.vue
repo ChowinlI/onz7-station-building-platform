@@ -91,6 +91,7 @@ export default {
     },
     /**切换历史标签 */
     changeTab(tab) {
+      if (this.$route.name === tab.name) return
       this.$router.push({ name: tab.name })
     },
     /**关闭历史标签 */

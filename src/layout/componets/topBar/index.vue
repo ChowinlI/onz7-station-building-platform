@@ -31,9 +31,7 @@ export default {
       return this.$route.matched
     }
   },
-  mounted() {
-    console.log(this.matched)
-  },
+  mounted() {},
   methods: {
     toggleMenu() {
       this.$store.dispatch('app/toggleMenu')

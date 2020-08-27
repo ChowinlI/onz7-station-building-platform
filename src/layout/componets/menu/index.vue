@@ -47,7 +47,6 @@ export default {
   },
   created() {
     this.active = this.$route.name
-    console.log(this.active, this.asyncRouters[0].children)
   },
   mounted() {},
   methods: {

@@ -69,15 +69,15 @@ export default {
       }
     }
     &-main {
-      // height: 100%;
       background-color: #f9f9f9;
       color: #333;
       padding: 20px;
+      min-height: 100%;
+      box-sizing: border-box;
 
       .view-container {
         margin: 0;
-        box-sizing: border-box;
-        height: 2000px;
+        height: 100%;
       }
     }
   }

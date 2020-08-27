@@ -48,6 +48,10 @@ const actions = {
           title: '底层layout'
         },
         children: []
+      },
+      {
+        path: '*',
+        redirect: '/layout/404'
       }
     ]
     const asyncRouterRes = await asyncMenu()
@@ -57,16 +61,13 @@ const actions = {
       name: '404',
       hidden: true,
       meta: {
-        title: '迷路了*。*'
+        title: '迷路了*。*',
+        hidden: false
       },
       component: 'views/error/index.vue'
     })
     formatRouter(asyncRouter)
     baseRouter[0].children = asyncRouter
-    baseRouter.push({
-      path: '*',
-      redirect: '/layout/404'
-    })
     asyncRouterHandle(baseRouter)
     commit('setAsyncRouter', baseRouter)
     commit('setRouterList', routerList)
