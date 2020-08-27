@@ -1,6 +1,10 @@
 
 <template>
-    <el-submenu :popper-append-to-body="false" ref="subMenu" :index="routerInfo.name">
+    <el-submenu
+        :popper-append-to-body="true"
+        ref="subMenu"
+        :index="routerInfo.name"
+    >
         <template slot="title">
             <i :class="'el-icon-'+routerInfo.meta.icon"></i>
             <span slot="title">{{routerInfo.meta.title}}</span>

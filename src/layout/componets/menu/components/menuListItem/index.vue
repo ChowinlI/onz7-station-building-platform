@@ -1,8 +1,15 @@
 <template>
-    <component :is="menuItemComponent" :routerInfo="routerInfo" v-if="!routerInfo.hidden">
-        <!-- 如果存在子路由还存在子路由，则递归调用该组件 -->
+    <component
+        :is="menuItemComponent"
+        :routerInfo="routerInfo"
+        v-if="!routerInfo.hidden"
+    >
         <template v-if="routerInfo.children&&routerInfo.children.length">
-            <menu-list-item :key="item.name" :routerInfo="item" v-for="item in routerInfo.children" />
+            <menu-list-item
+                :key="item.name"
+                :routerInfo="item"
+                v-for="item in routerInfo.children"
+            />
         </template>
     </component>
 </template>
