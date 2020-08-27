@@ -14,7 +14,13 @@ import {
   Menu,
   Submenu,
   MenuItemGroup,
-  MenuItem
+  MenuItem,
+  Scrollbar,
+  Breadcrumb,
+  BreadcrumbItem,
+  Tabs,
+  TabPane,
+  Tooltip
 } from 'element-ui'
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 }
@@ -33,7 +39,13 @@ const components = [
   Menu,
   Submenu,
   MenuItemGroup,
-  MenuItem
+  MenuItem,
+  Scrollbar,
+  Breadcrumb,
+  BreadcrumbItem,
+  Tabs,
+  TabPane,
+  Tooltip
 ]
 
 components.forEach((comp) => {

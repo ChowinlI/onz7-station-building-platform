@@ -1,1 +1,19 @@
-@import "./base.less";
+@import './base.less';
+
+// 左侧菜单collapse状态时，鼠标指向submenu的图标，由于定位问题将popper-append-to-body设为true,其内容会以独立的menu组件挂载到body上,因此样式需要全局定义
+.el-menu--vertical {
+  .el-menu {
+    margin-left: -8px;
+    background-color: rgb(48, 65, 86);
+
+    .el-menu-item {
+      background-color: rgb(48, 65, 86);
+    }
+
+    .el-menu-item:focus,
+    .el-menu-item:hover {
+      background-color: #263445;
+      color: #fff;
+    }
+  }
+}

@@ -10,7 +10,7 @@ router.beforeEach(async (to, from, next) => {
   if (whiteList.includes(to.name)) {
     // 在白名单且已登录
     if (token) {
-      next('/layout')
+      next({path: '/layout/dashboard'})
     } else {
       next()
     }
@@ -28,7 +28,6 @@ router.beforeEach(async (to, from, next) => {
         next()
       }
     } else {
-      console.log(to.path, document.location.hash)
       next({
         name: 'login',
         query: {
