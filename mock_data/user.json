@@ -5,12 +5,8 @@
     "nickname": "超级管理员",
     "userId": 1
   },
-  "menu": [
-    {
-      "ID": 0,
-      "CreatedAt": "2019-09-19T22:05:18+08:00",
-      "UpdatedAt": "2020-05-30T15:43:06+08:00",
-      "DeletedAt": null,
+  "menu": [{
+      "id": 0,
       "parentId": "0",
       "path": "dashboard",
       "name": "dashboard",
@@ -28,10 +24,7 @@
       "children": null
     },
     {
-      "ID": 0,
-      "CreatedAt": "2019-09-19T22:06:38+08:00",
-      "UpdatedAt": "2020-04-24T10:16:43+08:00",
-      "DeletedAt": null,
+      "id": 0,
       "parentId": "0",
       "path": "admin",
       "name": "superAdmin",
@@ -46,12 +39,8 @@
       },
       "authoritys": null,
       "menuId": "3",
-      "children": [
-        {
-          "ID": 0,
-          "CreatedAt": "2020-06-24T19:51:33+08:00",
-          "UpdatedAt": "2020-06-28T20:35:04+08:00",
-          "DeletedAt": null,
+      "children": [{
+          "id": 0,
           "parentId": "3",
           "path": "dictionaryDetail/:id",
           "name": "dictionaryDetail",
@@ -69,10 +58,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2019-09-19T22:11:53+08:00",
-          "UpdatedAt": "2020-05-30T15:43:25+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "3",
           "path": "authority",
           "name": "authority",
@@ -90,10 +76,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2019-09-19T22:13:18+08:00",
-          "UpdatedAt": "2020-04-30T17:45:27+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "3",
           "path": "menu",
           "name": "menu",
@@ -111,10 +94,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2019-09-19T22:13:36+08:00",
-          "UpdatedAt": "2020-04-24T10:16:43+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "3",
           "path": "api",
           "name": "api",
@@ -132,10 +112,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2019-10-09T15:12:29+08:00",
-          "UpdatedAt": "2020-04-24T10:16:43+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "3",
           "path": "user",
           "name": "user",
@@ -153,10 +130,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2020-06-24T19:49:54+08:00",
-          "UpdatedAt": "2020-06-28T20:34:47+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "3",
           "path": "dictionary",
           "name": "dictionary",
@@ -174,10 +148,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2020-06-29T13:31:17+08:00",
-          "UpdatedAt": "2020-07-07T16:05:34+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "3",
           "path": "operation",
           "name": "operation",
@@ -197,10 +168,7 @@
       ]
     },
     {
-      "ID": 0,
-      "CreatedAt": "2019-10-15T22:27:22+08:00",
-      "UpdatedAt": "2020-05-10T21:31:36+08:00",
-      "DeletedAt": null,
+      "id": 0,
       "parentId": "0",
       "path": "person",
       "name": "person",
@@ -218,10 +186,7 @@
       "children": null
     },
     {
-      "ID": 0,
-      "CreatedAt": "2020-03-29T21:31:03+08:00",
-      "UpdatedAt": "2020-04-24T10:16:43+08:00",
-      "DeletedAt": null,
+      "id": 0,
       "parentId": "0",
       "path": "systemTools",
       "name": "systemTools",
@@ -236,12 +201,8 @@
       },
       "authoritys": null,
       "menuId": "38",
-      "children": [
-        {
-          "ID": 0,
-          "CreatedAt": "2020-03-29T21:35:10+08:00",
-          "UpdatedAt": "2020-05-03T21:38:49+08:00",
-          "DeletedAt": null,
+      "children": [{
+          "id": 0,
           "parentId": "38",
           "path": "autoCode",
           "name": "autoCode",
@@ -259,10 +220,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2020-03-29T21:36:26+08:00",
-          "UpdatedAt": "2020-05-03T21:38:43+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "38",
           "path": "formCreate",
           "name": "formCreate",
@@ -282,10 +240,7 @@
       ]
     },
     {
-      "ID": 0,
-      "CreatedAt": "2019-10-20T11:14:42+08:00",
-      "UpdatedAt": "2020-04-24T10:16:43+08:00",
-      "DeletedAt": null,
+      "id": 0,
       "parentId": "0",
       "path": "example",
       "name": "example",
@@ -300,12 +255,8 @@
       },
       "authoritys": null,
       "menuId": "19",
-      "children": [
-        {
-          "ID": 0,
-          "CreatedAt": "2019-10-20T11:18:11+08:00",
-          "UpdatedAt": "2020-04-24T10:16:42+08:00",
-          "DeletedAt": null,
+      "children": [{
+          "id": 0,
           "parentId": "19",
           "path": "table",
           "name": "table",
@@ -323,10 +274,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2019-10-20T11:19:52+08:00",
-          "UpdatedAt": "2020-04-24T10:16:43+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "19",
           "path": "form",
           "name": "form",
@@ -344,10 +292,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2019-10-20T11:22:19+08:00",
-          "UpdatedAt": "2020-04-24T10:16:43+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "19",
           "path": "rte",
           "name": "rte",
@@ -365,10 +310,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2019-10-20T11:23:39+08:00",
-          "UpdatedAt": "2020-04-24T10:16:43+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "19",
           "path": "excel",
           "name": "excel",
@@ -386,10 +328,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2019-10-20T11:27:02+08:00",
-          "UpdatedAt": "2020-04-24T10:16:43+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "19",
           "path": "upload",
           "name": "upload",
@@ -407,10 +346,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2020-02-17T16:20:47+08:00",
-          "UpdatedAt": "2020-04-24T10:16:43+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "19",
           "path": "breakpoint",
           "name": "breakpoint",
@@ -428,10 +364,7 @@
           "children": null
         },
         {
-          "ID": 0,
-          "CreatedAt": "2020-02-24T19:48:37+08:00",
-          "UpdatedAt": "2020-04-24T10:16:43+08:00",
-          "DeletedAt": null,
+          "id": 0,
           "parentId": "19",
           "path": "customer",
           "name": "customer",
@@ -451,10 +384,7 @@
       ]
     },
     {
-      "ID": 0,
-      "CreatedAt": "2019-09-19T22:06:17+08:00",
-      "UpdatedAt": "2020-05-10T21:31:50+08:00",
-      "DeletedAt": null,
+      "id": 0,
       "parentId": "0",
       "path": "about",
       "name": "about",

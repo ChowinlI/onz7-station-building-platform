@@ -1,25 +1,23 @@
 <template>
   <div class="history-nav">
-    <el-tabs
-      type="card"
-      :closable="!(history.length == 1 && this.$route.name == 'dashboard')"
-      @tab-click="changeTab"
-      @tab-remove="removeTab"
-      @contextmenu.prevent.native="openContextMenu($event)"
-      v-model="active"
-    >
-      <el-tab-pane
-        :key="item.name"
-        :label="item.meta.title"
-        :name="item.name"
-        v-for="item in history"
-      >
+    <el-tabs type="card"
+             :closable="!(history.length == 1 && this.$route.name == 'dashboard')"
+             @tab-click="changeTab"
+             @tab-remove="removeTab"
+             @contextmenu.prevent.native="openContextMenu($event)"
+             v-model="active">
+      <el-tab-pane :key="item.name"
+                   :label="item.meta.title"
+                   :name="item.name"
+                   v-for="item in history">
         <slot name="view"></slot>
       </el-tab-pane>
     </el-tabs>
 
     <!-- 自定义右键菜单 -->
-    <ul :style="{left:left+'px',top:top+'px'}" class="contextmenu" v-show="contextMenuVisible">
+    <ul :style="{left:left+'px',top:top+'px'}"
+        class="contextmenu"
+        v-show="contextMenuVisible">
       <li @click="closeAll">关闭所有</li>
       <li @click="closeLeft">关闭左侧</li>
       <li @click="closeRight">关闭右侧</li>
@@ -81,7 +79,7 @@ export default {
     },
     /**添加历史标签 */
     setTab(route) {
-      if (!this.history.some((item) => item.name == route.name)) {
+      if (!this.history.some(item => item.name == route.name)) {
         const obj = {}
         obj.name = route.name
         obj.meta = route.meta
@@ -96,7 +94,7 @@ export default {
     },
     /**关闭历史标签 */
     removeTab(tab) {
-      const index = this.history.findIndex((item) => item.name == tab)
+      const index = this.history.findIndex(item => item.name == tab)
       if (this.$route.name == tab) {
         if (this.history.length == 1) {
           this.$router.push({ name: 'dashboard' })
@@ -126,12 +124,8 @@ export default {
     },
     /**关闭左侧 */
     closeLeft() {
-      const rightIndex = this.history.findIndex(
-        (item) => item.name == this.rightActive
-      )
-      const activeIndex = this.history.findIndex(
-        (item) => item.name == this.activeValue
-      )
+      const rightIndex = this.history.findIndex(item => item.name == this.rightActive)
+      const activeIndex = this.history.findIndex(item => item.name == this.activeValue)
       this.history.splice(0, rightIndex)
       if (rightIndex > activeIndex) {
         this.$router.push({ name: this.rightActive })
@@ -140,12 +134,8 @@ export default {
     },
     /**关闭右侧 */
     closeRight() {
-      const leftIndex = this.history.findIndex(
-        (item) => item.name == this.rightActive
-      )
-      const activeIndex = this.history.findIndex(
-        (item) => item.name == this.activeValue
-      )
+      const leftIndex = this.history.findIndex(item => item.name == this.rightActive)
+      const activeIndex = this.history.findIndex(item => item.name == this.activeValue)
       this.history.splice(leftIndex + 1, this.history.length)
       if (leftIndex < activeIndex) {
         this.$router.push({ name: this.rightActive })
@@ -154,9 +144,7 @@ export default {
     },
     /**关闭右侧 */
     closeOther() {
-      this.history = this.history.filter(
-        (item) => item.name == this.rightActive
-      )
+      this.history = this.history.filter(item => item.name == this.rightActive)
       this.$router.push({ name: this.rightActive })
       sessionStorage.setItem('history', JSON.stringify(this.history))
     }
@@ -174,7 +162,7 @@ export default {
       }
     },
     $route(to) {
-      this.history = this.history.filter((item) => !item.meta.hidden)
+      this.history = this.history.filter(item => !item.meta.hidden)
       this.setTab(to)
       sessionStorage.setItem('history', JSON.stringify(this.history))
     }
@@ -185,10 +173,8 @@ export default {
 <style lang="less" scoped>
 .history-nav {
   padding: 5px 20px;
-  -webkit-box-shadow: inset 0 1px 4px rgba(0, 21, 41, 0.08),
-    inset 0 -1px 4px rgba(0, 21, 41, 0.08);
-  box-shadow: inset 0 1px 4px rgba(0, 21, 41, 0.08),
-    inset 0 -1px 4px rgba(0, 21, 41, 0.08);
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 21, 41, 0.08), inset 0 -1px 4px rgba(0, 21, 41, 0.08);
+  box-shadow: inset 0 1px 4px rgba(0, 21, 41, 0.08), inset 0 -1px 4px rgba(0, 21, 41, 0.08);
   background: transparent;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
