@@ -54,7 +54,7 @@ export default {
 
     .aside {
         background-color: #001529;
-        // overflow: hidden;
+        overflow: hidden;
     }
 
     .content {
@@ -67,7 +67,7 @@ export default {
             height: calc(100vh - 114px);
 
             /deep/ .el-scrollbar__wrap {
-                // overflow-x: hidden;
+                overflow-x: hidden;
 
                 /deep/ .el-scrollbar__view {
                     height: 100%;
