@@ -1,4 +1,4 @@
-import { login, getUserInfo } from '@/api/user'
+import { login, getUserInfo, logout } from '@/api/user'
 import router from '@/router/index'
 
 const state = {
@@ -45,10 +45,11 @@ const actions = {
     }
   },
   async logout({ commit }) {
-    // const res = await jsonInBlacklist()
-    // if (res.code == 0) {
-    //   commit('logout')
-    // }
+    const res = await logout()
+    if (res.code == 0) {
+      commit('logout')
+      router.push({ path: '/login'})
+    }
   }
 }
 

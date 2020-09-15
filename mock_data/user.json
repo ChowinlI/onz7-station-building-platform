@@ -1,6 +1,7 @@
 {
   "token": "mockToken2020",
   "userInfo": {
+    "avatar": "assets/github.png",
     "username": "admin",
     "nickname": "超级管理员",
     "userId": 1
@@ -16,8 +17,8 @@
       "meta": {
         "keepAlive": false,
         "defaultMenu": false,
-        "title": "仪表盘",
-        "icon": "setting"
+        "title": "首页",
+        "icon": "s-home"
       },
       "authoritys": null,
       "menuId": "1",
@@ -34,7 +35,7 @@
       "meta": {
         "keepAlive": false,
         "defaultMenu": false,
-        "title": "超级管理员",
+        "title": "权限管理",
         "icon": "user-solid"
       },
       "authoritys": null,
@@ -178,8 +179,8 @@
       "meta": {
         "keepAlive": false,
         "defaultMenu": false,
-        "title": "个人信息",
-        "icon": "message-solid"
+        "title": "商品管理",
+        "icon": "message-s-goods"
       },
       "authoritys": null,
       "menuId": "18",
@@ -196,8 +197,8 @@
       "meta": {
         "keepAlive": false,
         "defaultMenu": false,
-        "title": "系统工具",
-        "icon": "s-cooperation"
+        "title": "订单管理",
+        "icon": "s-order"
       },
       "authoritys": null,
       "menuId": "38",
@@ -250,8 +251,8 @@
       "meta": {
         "keepAlive": false,
         "defaultMenu": false,
-        "title": "示例文件",
-        "icon": "s-management"
+        "title": "营销管理",
+        "icon": "s-marketing"
       },
       "authoritys": null,
       "menuId": "19",
@@ -394,8 +395,8 @@
       "meta": {
         "keepAlive": false,
         "defaultMenu": false,
-        "title": "关于我们",
-        "icon": "info"
+        "title": "落地页",
+        "icon": "s-shop"
       },
       "authoritys": null,
       "menuId": "2",

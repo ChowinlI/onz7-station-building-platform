@@ -8,6 +8,14 @@ export const login = (data) => {
   })
 }
 
+export const logout = (data) => {
+  return service({
+    url: '/logout',
+    method: 'post',
+    data
+  })
+}
+
 export const getUserInfo = (params) => {
   return service({
     url: '/userInfo',

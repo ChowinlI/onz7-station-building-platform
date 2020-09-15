@@ -48,6 +48,7 @@ export default {
 <style lang="less" scoped>
 .layout-container {
     width: 100%;
+    min-width: 1200px;
     height: 100%;
     position: relative;
     overflow: hidden;

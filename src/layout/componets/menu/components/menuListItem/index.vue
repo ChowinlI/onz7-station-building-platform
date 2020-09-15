@@ -3,6 +3,7 @@
                :routerInfo="routerInfo"
                v-if="!routerInfo.hidden">
         <template v-if="menuItemComponent === 'subMenuItem'">
+            <!-- 如果当前菜单有二级菜单甚至更多级子菜单，则递归调用组件 -->
             <menuListItem v-for="item in routerInfo.children"
                           :routerInfo="item"
                           :key="item.name" />

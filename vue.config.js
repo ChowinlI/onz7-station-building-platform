@@ -31,6 +31,13 @@ module.exports = {
         })
       })
 
+      app.post('/api/logout', function(req, res) {
+        res.json({
+          code: 0,
+          data: true
+        })
+      })
+
       app.post('/api/menu/getMenu', function(req, res) {
         res.json({
           code: 0,
@@ -65,7 +72,8 @@ module.exports = {
         common: resolve('src/common'),
         components: resolve('src/components'),
         api: resolve('src/api'),
-        views: resolve('src/views')
+        views: resolve('src/views'),
+        assets: resolve('src/assets')
       }
     }
   },

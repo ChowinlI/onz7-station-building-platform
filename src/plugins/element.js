@@ -20,7 +20,7 @@ import {
   BreadcrumbItem,
   Tabs,
   TabPane,
-  Tooltip
+  Tooltip, Select, Option, Dropdown, Image, DropdownMenu, DropdownItem, Avatar
 } from 'element-ui'
 
 Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 }
@@ -45,7 +45,14 @@ const components = [
   BreadcrumbItem,
   Tabs,
   TabPane,
-  Tooltip
+  Tooltip,
+  Select,
+  Option,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  Image,
+  Avatar
 ]
 
 components.forEach((comp) => {
