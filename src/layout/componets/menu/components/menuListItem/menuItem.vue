@@ -11,10 +11,10 @@ export default {
   props: {
     routerInfo: {
       default: function () {
-        return null
+        return null;
       },
       type: Object
     }
   }
-}
+};
 </script>

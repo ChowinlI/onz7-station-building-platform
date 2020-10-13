@@ -6,8 +6,7 @@ const routerList = []
 
 // 格式化路由
 const formatRouter = (routes) => {
-  routes &&
-    routes.map((item) => {
+  routes && routes.map((item) => {
       if (
         (!item.children || item.children.every((ch) => ch.hidden)) &&
         item.name != '404'
@@ -61,7 +60,7 @@ const actions = {
       name: '404',
       hidden: true,
       meta: {
-        title: '迷路了*。*',
+        title: '未找到页面',
         hidden: false
       },
       component: 'views/error/index.vue'

@@ -27,173 +27,114 @@
     {
       "id": 0,
       "parentId": "0",
-      "path": "admin",
-      "name": "superAdmin",
+      "path": "goods",
+      "name": "goods",
       "hidden": false,
-      "component": "views/superAdmin/index.vue",
-      "sort": 3,
-      "meta": {
-        "keepAlive": false,
-        "defaultMenu": false,
-        "title": "权限管理",
-        "icon": "user-solid"
-      },
-      "authoritys": null,
-      "menuId": "3",
-      "children": [{
-          "id": 0,
-          "parentId": "3",
-          "path": "dictionaryDetail/:id",
-          "name": "dictionaryDetail",
-          "hidden": true,
-          "component": "views/superAdmin/dictionary/sysDictionaryDetail.vue",
-          "sort": 1,
-          "meta": {
-            "keepAlive": false,
-            "defaultMenu": false,
-            "title": "字典详情",
-            "icon": "s-order"
-          },
-          "authoritys": null,
-          "menuId": "51",
-          "children": null
-        },
-        {
-          "id": 0,
-          "parentId": "3",
-          "path": "authority",
-          "name": "authority",
-          "hidden": false,
-          "component": "views/superAdmin/authority/authority.vue",
-          "sort": 1,
-          "meta": {
-            "keepAlive": false,
-            "defaultMenu": false,
-            "title": "角色管理",
-            "icon": "s-custom"
-          },
-          "authoritys": null,
-          "menuId": "4",
-          "children": null
-        },
-        {
-          "id": 0,
-          "parentId": "3",
-          "path": "menu",
-          "name": "menu",
-          "hidden": false,
-          "component": "views/superAdmin/menu/menu.vue",
-          "sort": 2,
-          "meta": {
-            "keepAlive": true,
-            "defaultMenu": false,
-            "title": "菜单管理",
-            "icon": "s-order"
-          },
-          "authoritys": null,
-          "menuId": "5",
-          "children": null
-        },
-        {
-          "id": 0,
-          "parentId": "3",
-          "path": "api",
-          "name": "api",
-          "hidden": false,
-          "component": "views/superAdmin/api/api.vue",
-          "sort": 3,
-          "meta": {
-            "keepAlive": true,
-            "defaultMenu": false,
-            "title": "api管理",
-            "icon": "s-platform"
-          },
-          "authoritys": null,
-          "menuId": "6",
-          "children": null
-        },
-        {
-          "id": 0,
-          "parentId": "3",
-          "path": "user",
-          "name": "user",
-          "hidden": false,
-          "component": "views/superAdmin/user/user.vue",
-          "sort": 4,
-          "meta": {
-            "keepAlive": false,
-            "defaultMenu": false,
-            "title": "用户管理",
-            "icon": "coordinate"
-          },
-          "authoritys": null,
-          "menuId": "17",
-          "children": null
-        },
-        {
-          "id": 0,
-          "parentId": "3",
-          "path": "dictionary",
-          "name": "dictionary",
-          "hidden": false,
-          "component": "views/superAdmin/dictionary/sysDictionary.vue",
-          "sort": 5,
-          "meta": {
-            "keepAlive": false,
-            "defaultMenu": false,
-            "title": "字典管理",
-            "icon": "notebook-2"
-          },
-          "authoritys": null,
-          "menuId": "50",
-          "children": null
-        },
-        {
-          "id": 0,
-          "parentId": "3",
-          "path": "operation",
-          "name": "operation",
-          "hidden": false,
-          "component": "views/superAdmin/operation/sysOperationRecord.vue",
-          "sort": 6,
-          "meta": {
-            "keepAlive": false,
-            "defaultMenu": false,
-            "title": "操作历史",
-            "icon": "time"
-          },
-          "authoritys": null,
-          "menuId": "52",
-          "children": null
-        }
-      ]
-    },
-    {
-      "id": 0,
-      "parentId": "0",
-      "path": "person",
-      "name": "person",
-      "hidden": true,
-      "component": "views/person/person.vue",
-      "sort": 4,
+      "component": "views/goods/index.vue",
+      "sort": 2,
       "meta": {
         "keepAlive": false,
         "defaultMenu": false,
         "title": "商品管理",
-        "icon": "message-s-goods"
+        "icon": "s-goods"
       },
       "authoritys": null,
-      "menuId": "18",
-      "children": null
+      "menuId": "2",
+      "children": [{
+        "id": 0,
+        "parentId": "2",
+        "path": "list",
+        "name": "goodsList",
+        "hidden": false,
+        "component": "views/goods/list/index.vue",
+        "sort": 1,
+        "meta": {
+          "keepAlive": true,
+          "defaultMenu": false,
+          "title": "商品列表",
+          "icon": "s-order"
+        },
+        "authoritys": null,
+        "menuId": "2_1",
+        "children": null
+      },{
+        "id": 0,
+        "parentId": "2",
+        "path": "add",
+        "name": "addGoods",
+        "hidden": false,
+        "component": "views/goods/add/index.vue",
+        "sort": 1,
+        "meta": {
+          "keepAlive": true,
+          "defaultMenu": false,
+          "title": "商品添加",
+          "icon": "circle-plus"
+        },
+        "authoritys": null,
+        "menuId": "2_2",
+        "children": null
+      },{
+        "id": 0,
+        "parentId": "2",
+        "path": "types",
+        "name": "GoodsTypes",
+        "hidden": false,
+        "component": "views/goods/types/index.vue",
+        "sort": 1,
+        "meta": {
+          "keepAlive": true,
+          "defaultMenu": false,
+          "title": "商品分类",
+          "icon": "menu"
+        },
+        "authoritys": null,
+        "menuId": "2_3",
+        "children": null
+      },{
+        "id": 0,
+        "parentId": "2",
+        "path": "attributes",
+        "name": "GoodsAttributes",
+        "hidden": false,
+        "component": "views/goods/attributes/index.vue",
+        "sort": 1,
+        "meta": {
+          "keepAlive": true,
+          "defaultMenu": false,
+          "title": "商品属性",
+          "icon": "s-operation"
+        },
+        "authoritys": null,
+        "menuId": "2_4",
+        "children": null
+      },{
+        "id": 0,
+        "parentId": "2",
+        "path": "brands",
+        "name": "goodsBrands",
+        "hidden": false,
+        "component": "views/goods/brands/index.vue",
+        "sort": 1,
+        "meta": {
+          "keepAlive": true,
+          "defaultMenu": false,
+          "title": "品牌管理",
+          "icon": "s-promotion"
+        },
+        "authoritys": null,
+        "menuId": "2_5",
+        "children": null
+      }]
     },
     {
       "id": 0,
       "parentId": "0",
-      "path": "systemTools",
-      "name": "systemTools",
+      "path": "order",
+      "name": "order",
       "hidden": false,
-      "component": "views/systemTools/index.vue",
-      "sort": 5,
+      "component": "views/order/index.vue",
+      "sort": 3,
       "meta": {
         "keepAlive": false,
         "defaultMenu": false,
@@ -201,206 +142,77 @@
         "icon": "s-order"
       },
       "authoritys": null,
-      "menuId": "38",
+      "menuId": "3",
       "children": [{
           "id": 0,
-          "parentId": "38",
-          "path": "autoCode",
-          "name": "autoCode",
+          "parentId": "3",
+          "path": "list",
+          "name": "orderList",
           "hidden": false,
-          "component": "views/systemTools/autoCode/index.vue",
+          "component": "views/order/list/index.vue",
           "sort": 1,
           "meta": {
             "keepAlive": true,
             "defaultMenu": false,
-            "title": "代码生成器",
-            "icon": "cpu"
-          },
-          "authoritys": null,
-          "menuId": "40",
-          "children": null
-        },
-        {
-          "id": 0,
-          "parentId": "38",
-          "path": "formCreate",
-          "name": "formCreate",
-          "hidden": false,
-          "component": "views/systemTools/formCreate/index.vue",
-          "sort": 2,
-          "meta": {
-            "keepAlive": true,
-            "defaultMenu": false,
-            "title": "表单生成器",
-            "icon": "magic-stick"
-          },
-          "authoritys": null,
-          "menuId": "41",
-          "children": null
-        }
-      ]
-    },
-    {
-      "id": 0,
-      "parentId": "0",
-      "path": "example",
-      "name": "example",
-      "hidden": false,
-      "component": "views/example/index.vue",
-      "sort": 6,
-      "meta": {
-        "keepAlive": false,
-        "defaultMenu": false,
-        "title": "营销管理",
-        "icon": "s-marketing"
-      },
-      "authoritys": null,
-      "menuId": "19",
-      "children": [{
-          "id": 0,
-          "parentId": "19",
-          "path": "table",
-          "name": "table",
-          "hidden": false,
-          "component": "views/example/table/table.vue",
-          "sort": 1,
-          "meta": {
-            "keepAlive": false,
-            "defaultMenu": false,
-            "title": "表格示例",
+            "title": "订单列表",
             "icon": "s-order"
           },
           "authoritys": null,
-          "menuId": "20",
+          "menuId": "3_1",
           "children": null
-        },
-        {
+        },{
           "id": 0,
-          "parentId": "19",
-          "path": "form",
-          "name": "form",
+          "parentId": "3",
+          "path": "rejects",
+          "name": "rejects",
           "hidden": false,
-          "component": "views/example/form/form.vue",
+          "component": "views/goods/rejects/index.vue",
           "sort": 2,
           "meta": {
-            "keepAlive": false,
+            "keepAlive": true,
             "defaultMenu": false,
-            "title": "表单示例",
-            "icon": "document"
+            "title": "退货管理",
+            "icon": "s-release"
           },
           "authoritys": null,
-          "menuId": "21",
+          "menuId": "3_2",
           "children": null
-        },
-        {
+        },{
           "id": 0,
-          "parentId": "19",
-          "path": "rte",
-          "name": "rte",
+          "parentId": "3",
+          "path": "delivery",
+          "name": "delivery",
           "hidden": false,
-          "component": "views/example/rte/rte.vue",
-          "sort": 3,
+          "component": "views/systemTools/delivery/index.vue",
+          "sort": 2,
           "meta": {
-            "keepAlive": false,
+            "keepAlive": true,
             "defaultMenu": false,
-            "title": "富文本编辑器",
-            "icon": "reading"
+            "title": "配送方式",
+            "icon": "s-cooperation"
           },
           "authoritys": null,
-          "menuId": "22",
+          "menuId": "3_3",
           "children": null
-        },
-        {
+        },{
           "id": 0,
-          "parentId": "19",
-          "path": "excel",
-          "name": "excel",
+          "parentId": "3",
+          "path": "init",
+          "name": "init",
           "hidden": false,
-          "component": "views/example/excel/excel.vue",
-          "sort": 4,
+          "component": "views/order/init/index.vue",
+          "sort": 2,
           "meta": {
-            "keepAlive": false,
+            "keepAlive": true,
             "defaultMenu": false,
-            "title": "excel导入导出",
-            "icon": "s-marketing"
+            "title": "订单设置",
+            "icon": "setting"
           },
           "authoritys": null,
-          "menuId": "23",
-          "children": null
-        },
-        {
-          "id": 0,
-          "parentId": "19",
-          "path": "upload",
-          "name": "upload",
-          "hidden": false,
-          "component": "views/example/upload/upload.vue",
-          "sort": 5,
-          "meta": {
-            "keepAlive": false,
-            "defaultMenu": false,
-            "title": "上传下载",
-            "icon": "upload"
-          },
-          "authoritys": null,
-          "menuId": "26",
-          "children": null
-        },
-        {
-          "id": 0,
-          "parentId": "19",
-          "path": "breakpoint",
-          "name": "breakpoint",
-          "hidden": false,
-          "component": "views/example/breakpoint/breakpoint.vue",
-          "sort": 6,
-          "meta": {
-            "keepAlive": false,
-            "defaultMenu": false,
-            "title": "断点续传",
-            "icon": "upload"
-          },
-          "authoritys": null,
-          "menuId": "33",
-          "children": null
-        },
-        {
-          "id": 0,
-          "parentId": "19",
-          "path": "customer",
-          "name": "customer",
-          "hidden": false,
-          "component": "views/example/customer/customer.vue",
-          "sort": 7,
-          "meta": {
-            "keepAlive": false,
-            "defaultMenu": false,
-            "title": "客户列表（资源示例）",
-            "icon": "s-custom"
-          },
-          "authoritys": null,
-          "menuId": "34",
+          "menuId": "3_4",
           "children": null
         }
       ]
-    },
-    {
-      "id": 0,
-      "parentId": "0",
-      "path": "about",
-      "name": "about",
-      "hidden": false,
-      "component": "views/about/index.vue",
-      "sort": 7,
-      "meta": {
-        "keepAlive": false,
-        "defaultMenu": false,
-        "title": "落地页",
-        "icon": "s-shop"
-      },
-      "authoritys": null,
-      "menuId": "2",
-      "children": null
     }
   ]
 }

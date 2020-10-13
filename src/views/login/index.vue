@@ -1,38 +1,41 @@
 <template>
   <div class="login-container">
-    <el-card :body-style="{ padding: '20px' }" shadow="hover" class="login-form">
-      <div slot="header" class="login-form-header">
+    <el-card :body-style="{ padding: '20px' }"
+             shadow="hover"
+             class="login-form">
+      <div slot="header"
+           class="login-form-header">
         <span>欢迎登录Onz7建站平台</span>
       </div>
       <!-- card body -->
-      <el-form class="login-form-body" :model="loginForm">
+      <el-form class="login-form-body"
+               :model="loginForm">
         <el-form-item>
-          <el-input v-model="loginForm.username" prefix-icon="el-icon-user" placeholder="请输入帐号"></el-input>
+          <el-input v-model="loginForm.username"
+                    prefix-icon="el-icon-user"
+                    placeholder="请输入帐号"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-input
-            v-model="loginForm.password"
-            prefix-icon="el-icon-lock"
-            placeholder="请输入密码"
-            show-password
-          ></el-input>
+          <el-input v-model="loginForm.password"
+                    prefix-icon="el-icon-lock"
+                    placeholder="请输入密码"
+                    show-password></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button
-            class="login-form-body-submit"
-            type="primary"
-            :loading="loading"
-            @click="loginSubmit"
-          >登录</el-button>
+          <el-button class="login-form-body-submit"
+                     type="primary"
+                     :loading="loading"
+                     @click="loginSubmit">登录</el-button>
         </el-form-item>
-        <el-checkbox class="login-form-body-remenber" v-model="remenber">记住我</el-checkbox>
+        <el-checkbox class="login-form-body-remenber"
+                     v-model="remenber">记住我</el-checkbox>
       </el-form>
     </el-card>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions } from 'vuex';
 export default {
   name: 'login',
   data() {
@@ -43,7 +46,7 @@ export default {
       },
       remenber: false,
       loading: false
-    }
+    };
   },
   methods: {
     ...mapActions('user', ['login']),
@@ -51,11 +54,11 @@ export default {
      * 登录
      */
     loginSubmit() {
-      let data = this.loginForm
-      this.login(data)
+      let data = this.loginForm;
+      this.login(data);
     }
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
