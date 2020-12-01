@@ -3,6 +3,7 @@ const path = require('path')
 const compressionPlugin = require('compression-webpack-plugin')
 const name = 'Onz7建站平台'
 const userData = require('./mock_data/user.json')
+const { config } = require('process')
 const { token, userInfo, menu } = userData
 
 function resolve(dir) {
@@ -77,9 +78,12 @@ module.exports = {
       }
     }
   },
+  chainWebpack: config => {
+    config.resolve.symlinks(true);
+  },
   css: {
     // 是否使用css分离插件 ExtractTextPlugin
-    extract: true,
+    extract: false,
     // 开启 CSS source maps?
     sourceMap: false,
     // css预设器配置项

@@ -31,8 +31,19 @@ const mutations = {
 
 const actions = {
   async login({ commit }, data) {
-    const loginRes = await login(data)
+    const { username, password, remember} = data
+    const loginRes = await login({username, password})
     commit('setToken', loginRes.data.token)
+    if(remember){
+      console.log(remember)
+      localStorage.setItem('onz7_remember', 1)
+      localStorage.setItem('onz7_username', data.username)
+      localStorage.setItem('onz7_password', data.password)
+    }else{
+      localStorage.removeItem('onz7_remember')
+      localStorage.removeItem('onz7_username')
+      localStorage.removeItem('onz7_password')
+    }
     const userInfo = await getUserInfo()
     commit('setUserInfo', userInfo.data)
     if (loginRes.code == 0) {
